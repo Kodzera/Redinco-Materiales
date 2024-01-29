@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: linear-gradient(to right, #70a1ff, #487eb0, #70a1ff);  
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 400px;
+  padding: 25px 20px 5px;
+  margin: auto;
+  border-radius: 1rem;
+  background-color: #f1f2f6;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 15px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.bli {
+  font-family: 'Blinker', sans-serif;
+}

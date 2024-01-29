@@ -1,0 +1,64 @@
+{% extends "materiales_app/base_list.html" %}
+{% load static %}
+{% block content %}
+	<div class="text-center text-primary mt-3 mb-3 border-bottom">
+		<h3>SOLICITUD DE MATERIALES</h3>
+	</div>
+	<div class="row mt-3 mb-3">
+		<div class="col-6 ps-5">
+			<a class="btn btn-sm btn-primary" href="">Nueva</a>
+		</div>
+		<div class="col-6 pe-5 text-end">
+			<a class="btn btn-sm btn-primary" href="">Materiales</a>
+		</div>
+	</div>
+	<div class="d-flex pt-2 border-top border-bottom">		
+		<div class="col-5 ms-auto mb-2">
+			<form method="GET">		
+				<label class="visually-hidden" for="id_client">Client name contains:</label>
+				<input class="form-control form-control-sm" type="text" name="client" id="id_client" placeholder="Buscar..." autofocus>			
+				<input class="visually-hidden" type="submit">
+			</form>
+		</div>        
+    </div>    
+    {% if messages %}
+		{% for message in messages %}
+			{% if message.tags == "success" %}
+				<div class="alert alert-primary alert-dismissible fade show" role="alert">
+					<span>{{ message }}</span>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+		  	{% else %}
+		  		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+					<span>{{ message }}</span>
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			{% endif %}
+		{% endfor %}
+  	{% endif %}
+  	<table class="table table-sm table-hover">
+		<thead>
+			<tr>
+				<th scope="col" style="width: 5%;">#</th>
+				<th scope="col" style="width: 20%;">Fecha</th>
+				<th scope="col" style="width: 25%;">Número</th>
+				<th scope="col" style="width: 50%;">Cliente</th>
+								
+								
+			</tr>
+		</thead>
+		<tbody>
+				
+			<tr>				
+				<td style="width: 5%;"><a href="" class="text-reset text-decoration-none">1</a></td>
+				<td style="width: 20%;"><a href="" class="text-reset text-decoration-none">01/12/1982</a></td>
+				<td style="width: 25%;"><a href="" class="text-reset text-decoration-none">123456</a></td>
+				<td style="width: 50%;"><a href="" class="text-reset text-decoration-none">SAC</a></td>
+				
+				
+			</tr>
+		
+		</tbody> 
+	</table>
+	
+{% endblock content %}
